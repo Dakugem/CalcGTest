@@ -1,7 +1,8 @@
-cmake -S . -B build -D ENABLE_COVERAGE=ON
+cmake -S . -B build -G Ninja -D ENABLE_COVERAGE=ON
 cmake --build build
 
-ctest -V
+cd build
 
-cmake --build build --target coverage
-rem "build\Debug\Calculator_test.exe"
+ctest -T Test -T Coverage
+
+cd ..
