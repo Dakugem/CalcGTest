@@ -4,10 +4,6 @@
 
 namespace calc
 {
-InMemoryHistory::InMemoryHistory(){
-    m_operations = std::vector<std::string>{};
-}
-
 void InMemoryHistory::AddEntry(const std::string& operation)
 {
     m_operations.push_back(operation);

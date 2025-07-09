@@ -43,3 +43,9 @@
 # CMAKE generated directories and etc.
 build/
 .vscode/
+
+# my bats
+build_ninja.bat
+
+
+.gitignore

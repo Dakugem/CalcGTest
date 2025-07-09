@@ -8,12 +8,12 @@
 namespace calc
 {
 
-SimpleCalculator::SimpleCalculator(IHistory& history)
+SimpleCalculator::SimpleCalculator(std::shared_ptr<IHistory> history)
     : m_history(history)
 {
 }
 
-void SimpleCalculator::SetHistory(IHistory& history)
+void SimpleCalculator::SetHistory(std::shared_ptr<IHistory> history)
 {
     m_history = history;
 }
@@ -50,7 +50,7 @@ void SimpleCalculator::LogOperation(int a, const char* op, int b, int result)
 {
     std::ostringstream oss;
     oss << a << " " << op << " " << b << " = " << result;
-    m_history.AddEntry(oss.str());
+    m_history->AddEntry(oss.str());
 }
 
 } // namespace calc

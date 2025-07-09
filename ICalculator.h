@@ -2,6 +2,8 @@
 
 #pragma once
 
+#include <memory>
+
 namespace calc
 {
 
@@ -17,7 +19,7 @@ public:
     virtual int Multiply(int a, int b) = 0;
     virtual int Divide(int a, int b) = 0;
 
-    virtual void SetHistory(IHistory& history) = 0;
+    virtual void SetHistory(std::shared_ptr<IHistory> history) = 0;
 };
 
 } // namespace calc

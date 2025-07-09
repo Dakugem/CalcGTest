@@ -14,7 +14,7 @@ public:
     }
 
     void SetUp() override{
-        InMemoryHistory hist = InMemoryHistory();
+        auto hist = std::make_shared<InMemoryHistory>();
         calc = std::make_unique<SimpleCalculator>(hist);
     }
 
@@ -30,12 +30,7 @@ public:
 };
 
 GTEST_TEST_F(CalculatorTest, Case1) {
-    std::cout << "Case 1 test start" << std::endl;
-    int res = calc->Add(2, 3);
-    std::cout << "Case 1 test add" << std::endl;
-    ASSERT_EQ(res, 5);
-    std::cout << "Case 1 test assert" << std::endl;
-    //ASSERT_EQ(calc->Add(2, 3), 5);
+    ASSERT_EQ(calc->Add(2, 3), 5);
 }
 
 int main(int argc, char* argv[])

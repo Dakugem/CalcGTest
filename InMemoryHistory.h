@@ -3,6 +3,7 @@
 #pragma once
 
 #include "IHistory.h"
+#include <iostream>
 
 namespace calc
 {
@@ -10,7 +11,7 @@ namespace calc
 class InMemoryHistory : public IHistory
 {
 public:
-    InMemoryHistory();// = default;
+    InMemoryHistory() = default;
 
     void AddEntry(const std::string& operation) override;
     std::vector<std::string> GetLastOperations(size_t count) const override;
