@@ -60,6 +60,4 @@ target_link_libraries (
 	CalcLib
 	gtest
 	gmock
-	#GMock::gmock_main
-	#GTest::gtest_main
 )
