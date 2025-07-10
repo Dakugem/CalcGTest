@@ -58,5 +58,8 @@ endif()
 target_link_libraries (
 	Calculator_test
 	CalcLib
-	GTest::gtest_main
+	gtest
+	gmock
+	#GMock::gmock_main
+	#GTest::gtest_main
 )

@@ -3,6 +3,7 @@ cmake --build build
 
 cd build
 
-ctest -T Test -T Coverage
+ctest -V -T Test 
+ctest -T Coverage
 
 cd ..
